@@ -1,0 +1,75 @@
+@media screen and (min-width:326px) and (max-width:700px){ 
+
+    .les-pdt{ 
+       /* border: 2px solid green;*/
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+        column-gap: 30px;
+        width: 100%;
+    }
+    article{ 
+        /*border: 1px solid red;*/
+        height: 350px;
+        width: auto;
+        border-radius: 10px;
+        background-color: white;
+        padding: 20px;
+        margin: 10px;
+        position: relative;
+    }
+    article:hover{ 
+        transform: scale(1.04);
+    }
+    .titre{ 
+        position: absolute;
+        font-size: 15vw;
+        color: #DC5ED8;
+        font-family: 'Yellowtail', cursive;
+    }
+    .sp-titre{ 
+        position: absolute;
+        top: 58%;
+        font-size: 9vw;
+        font-family: 'Yellowtail', cursive;
+    }
+    /*Le footer*/
+
+    footer{ 
+        /* border: 3px solid green;*/
+        height: auto;
+         margin-top: 28px;
+         background-color: #DADADA;
+         display: grid;
+         grid-template-columns: 1fr;
+         grid-template-rows: repeat(3, 1fr);
+     }
+     .div-CGV{ 
+        /*border: 1px solid red;*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        order: 2;
+        height: 100px;
+    }
+    .socila-media{ 
+        /*border: 1px solid green;*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+        justify-content: space-around;
+        height: 100px;
+    }
+    .contact{ 
+      /* border: 1px solid orange;*/
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       font-size: 18px;
+       order: 2;
+       height: 100px;
+   }
+}
