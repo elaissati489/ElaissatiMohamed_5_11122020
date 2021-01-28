@@ -73,7 +73,7 @@ object-fit: cover;
     justify-content: center;
     align-items: center;
 }
-.les-pdt{ 
+#les-pdt{ 
    /* border: 2px solid green;*/
     display: grid;
     grid-template-rows: repeat(2, 1fr);
@@ -106,19 +106,19 @@ article img{
     object-fit: cover;
 }
 
-.descri{ 
+.descri1{ 
     /*border: 2px solid red;*/
     height: 20%;
     padding: 0px 10px;
 }
-.titre-cam{ 
+#titre-cam1,#titre-cam2,#titre-cam3,#titre-cam4{ 
     font-family: 'Yellowtail', cursive;
     text-align: center;
     margin-top: 5px;
     margin-bottom: 5px;
     font-size: 26px;
 }
-.div-prix{ 
+.div-prix1,.div-prix2,.div-prix3,.div-prix4{ 
     font-family: 'Yellowtail', cursive;
     float: left;
     font-size: 29px;

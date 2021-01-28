@@ -1,0 +1,11 @@
+{
+  "name": "orinopack",
+  "version": "1.0.0",
+  "description": "P5 OC",
+  "main": "index.js",
+  "scripts": {
+    "test": "console.log('')\u001b[D\u001b[Dhello world\u001b[');"
+  },
+  "author": "Mohamed",
+  "license": "ISC"
+}

@@ -1,60 +1,78 @@
-/*JS pour charger dynamiquement les images de la page accueil*/
-var imagebaniere = document.getElementById('banniere')
-var image1 = document.getElementById('img1');
-var image2 = document.getElementById('img2');
-var image3 = document.getElementById('img3');
-var image4 = document.getElementById('img4');
+/*JS pour charger dynamiquement les images, les titres et les prix des produits de la page accueil*/
 
 
 
-fetch('http://localhost:3000/api/cameras')
-.then( Response => {
-    console.log(Response);
-    return Response.json();
-})
-.then(Response =>{ 
-imagebaniere.src = Response[3].imageUrl;
-})
+   // Récupere les donné de l'API fournit via la fonction fetch
+ 
+    fetch('http://localhost:3000/api/cameras')
+    .then(Response => { 
+        return Response.json()
+    })
+    .then(Response => { 
+        const mainImage = document.getElementById('banniere');
+        mainImage.src = Response[1].imageUrl;
+    // crée nos articles et leurs contenue en js via la fonction suivante
+
+        function creatDivContent(title,price,urlimage){ 
+            const divMain = document.querySelector('#les-pdt');
+            divMain.innerHTML += `<article class="arti2">
+            <img src=${urlimage} alt="camera2" id="img2">
+            <div class="descri2">
+               <p id="titre-cam2">${title}</p>
+               <a href="product.html">
+               <div class="div-voir"><p>Voir le produit</p></div>
+               </a>
+               <div class="div-prix2">${price}€</div>
+           </div>
+         </article>`
+        };
+
+    // Boucle qui va répeter la création de nos article en s'executant 5 fois 
+        for (i=0; i < Response.length; i++){ 
+            creatDivContent(Response[i].name,Response[i].price,Response[i].imageUrl);
+
+        }
 
 
-fetch('http://localhost:3000/api/cameras')
-.then( Response => {
-    console.log(Response);
-    return Response.json();
-})
-.then(Response =>{ 
-image1.src = Response[0].imageUrl;
-})
+    })
+ 
+    /*Le js pour charger les page produit de manière dynamique via le JS*/
 
 
-fetch('http://localhost:3000/api/cameras')
-.then( Response => {
-    console.log(Response);
-    return Response.json();
-})
-.then(Response =>{ 
-image2.src = Response[1].imageUrl;
-})
-
-fetch('http://localhost:3000/api/cameras')
-.then( Response => {
-    console.log(Response);
-    return Response.json();
-})
-.then(Response =>{ 
-image3.src = Response[2].imageUrl;
-})
-
-fetch('http://localhost:3000/api/cameras')
-.then( Response => {
-    console.log(Response);
-    return Response.json();
-})
-.then(Response =>{ 
-image4.src = Response[4].imageUrl;
-})
+    
 
 
-/*Test du js pour changer dynamiquement la page Produit*/
 
-var idcam1 = "5be1ed3f1c9d44000030b061";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
